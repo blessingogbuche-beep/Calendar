@@ -17,17 +17,26 @@
 
     <h2>My Calendar</h2>
 
+    <div class="navigation">
+
+    <a href="/calendar/{{ previous_month.year }}/{{ previous_month.month  }}">←</a>
+
     <h3>{{ month_name }} {{ year }}</h3>
 
-    <div class="days">
-        <span>Sun</span>
-        <span>Mon</span>
-        <span>Tue</span>
-        <span>Wed</span>
-        <span>Thu</span>
-        <span>Fri</span>
-        <span>Sat</span>
-    </div>
+    <a href="/calendar/{{ next_month.year }}/{{ next_month.month }}">→</a>
+
+</div>
+
+<div class="days">
+    <span>Sun</span>
+    <span>Mon</span>
+    <span>Tue</span>
+    <span>Wed</span>
+    <span>Thu</span>
+    <span>Fri</span>
+    <span>Sat</span>
+    
+</div>
 
     {% for week in month_days %}
 
